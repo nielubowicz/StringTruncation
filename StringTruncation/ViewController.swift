@@ -10,16 +10,45 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var output: UITextView!
+    
+    @IBOutlet weak var truncationLength: UITextField!
+    
+    private var truncation: Int = 1000 {
+        didSet {
+            self.set(text:self.textView.text)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.truncationLength.text = String(self.truncation)
+        self.output.text = textView.text.truncate(forMaxLength: self.truncation)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func set(text text:String) {
+        self.output.text = text.truncate(forMaxLength: self.truncation)
     }
-
-
+    
+    @IBAction func resign(gesture: UITapGestureRecognizer) {
+        self.resignFirstResponder()
+    }
 }
 
+//MARK- Truncation Length Handling
+extension ViewController {
+    @IBAction func textFieldChanged(sender: UITextField) {
+        guard let text = sender.text else { return }
+        guard let number = Int(text) else { return }
+        self.truncation = number
+    }
+}
+
+//MARK- UITextViewDelegate
+extension ViewController: UITextViewDelegate {
+    func textViewDidChange(textView: UITextView) {
+        guard textView != self.output else { return }
+        self.set(text: textView.text)
+    }
+}

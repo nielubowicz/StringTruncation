@@ -13,6 +13,7 @@
 		BAB1C1FD1D36DD5E00AB7BF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB1C1FC1D36DD5E00AB7BF2 /* Assets.xcassets */; };
 		BAB1C2001D36DD5E00AB7BF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB1C1FE1D36DD5E00AB7BF2 /* LaunchScreen.storyboard */; };
 		BAB1C20B1D36DD5E00AB7BF2 /* StringTruncationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1C20A1D36DD5E00AB7BF2 /* StringTruncationTests.swift */; };
+		BAB1C2161D36DD6D00AB7BF2 /* Truncation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB1C2151D36DD6D00AB7BF2 /* Truncation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		BAB1C2061D36DD5E00AB7BF2 /* StringTruncationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StringTruncationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB1C20A1D36DD5E00AB7BF2 /* StringTruncationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTruncationTests.swift; sourceTree = "<group>"; };
 		BAB1C20C1D36DD5E00AB7BF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAB1C2151D36DD6D00AB7BF2 /* Truncation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Truncation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				BAB1C1FC1D36DD5E00AB7BF2 /* Assets.xcassets */,
 				BAB1C1FE1D36DD5E00AB7BF2 /* LaunchScreen.storyboard */,
 				BAB1C2011D36DD5E00AB7BF2 /* Info.plist */,
+				BAB1C2151D36DD6D00AB7BF2 /* Truncation.swift */,
 			);
 			path = StringTruncation;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAB1C1F81D36DD5E00AB7BF2 /* ViewController.swift in Sources */,
+				BAB1C2161D36DD6D00AB7BF2 /* Truncation.swift in Sources */,
 				BAB1C1F61D36DD5E00AB7BF2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +332,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StringTruncation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AssortedIntelligence.StringTruncation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -339,6 +344,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StringTruncation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AssortedIntelligence.StringTruncation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
